@@ -21,19 +21,30 @@ public class amazon {
 		
 	}
 	
-//	@When("^User enters text in seach box and clicks on search button$")
-//	public void User_enters_text_in_seach_box_and_clicks_on_search_button() {
-//		
-//		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone 13");
-//		driver.findElement(By.id("nav-search-submit-button")).click();
-//		
-//	}
+	@When("^User enters text in seach box and clicks on search button$")
+	public void User_enters_text_in_seach_box_and_clicks_on_search_button() {
+		driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone 13");
+		driver.findElement(By.id("nav-search-submit-button")).click();
+		
+	}
 	
-//	@Then("^Should display searched result$")
-//	public void Should_display_searched_result() {
-//		
-//		
-//	}
-//	
+	@Then("^Should display searched result$")
+	public boolean Should_display_searched_result() {
+		
+		if (driver.findElements(By.xpath("//div[@data-cel-widget='search_result_1']//span[contains(text(),'Apple iPhone 13')]")).size()!= 0)
+				{
+			driver.close();
+			return true;
+		}
+		else {
+			driver.close();
+			return false;
+		}
+		
+//		driver.findElement(By.xpath()).isDisplayed();	
+		
+		
+	}
+	
 
 }
