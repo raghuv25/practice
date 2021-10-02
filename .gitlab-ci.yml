@@ -1,3 +1,5 @@
+image: maven:latest
+
 stages:
   - build
   - test
@@ -10,7 +12,7 @@ build:
 test:
     stage: test
     script:
-        - mvn test testrunner.java
+        - mvn clean test
 
 
     
