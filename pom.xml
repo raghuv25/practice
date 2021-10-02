@@ -25,12 +25,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>
-				<configuration>
+				<!-- <configuration>
 					<fork>true</fork>
 					<executable>C:\Program Files\Java\jdk1.8.0_251\bin\javac.exe</executable>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>
+				</configuration>   -->
 			</plugin>
 			
     </plugins>
